@@ -1,6 +1,6 @@
 (() => {
     // 配置部分
-    const leaveDelay = 30; // 触发事件的延迟，单位为秒
+    const leaveDelay = 0.1; // 触发事件的延迟，单位为秒
     const leaveFavicon = null; // 触发事件后的图标路径，设置为 null 表示不替换图标
     const leaveTitle = "{{{(>_<)}}}哦哟，崩溃啦~"; // 触发事件后的标题
     const returnTitle = "(*´∇｀*)欸，又好啦~"; // 回归之后的标题
