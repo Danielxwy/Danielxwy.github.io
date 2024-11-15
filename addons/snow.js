@@ -2,12 +2,12 @@
     // 设置雪花参数
     const snowConf = {
         flakeCount: 100,
-        minDist: 150,
+        minDist: 100,
         color: "255, 255, 255",
-        size: 2,
-        speed: 0.5,
+        size: 1.6,
+        speed: 0.2,
         opacity: 0.3,
-        stepsize: .5,
+        stepsize: .1,
     };
 
     // 记录下雪状态
