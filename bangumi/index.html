@@ -495,6 +495,8 @@
 
   <!-- 额外的追加注入项 -->
   
+    <link rel="stylesheet" href="/addons/snow.css" />
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
     <body class="custom-background">
@@ -744,13 +746,13 @@
 }
 </style>
 <div class="tabs">
-    <div class="tab-btn" onclick="tabClick(0); initPagination(0, 6)">
+    <div class="tab-btn" onclick="tabClick(0); initPagination(0, 5)">
         <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold">在看 (91)</a>
     </div>
-    <div class="tab-btn" onclick="tabClick(1); initPagination(1, 6)">
+    <div class="tab-btn" onclick="tabClick(1); initPagination(1, 5)">
         <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold">已看 (318)</a>
     </div>
-    <div class="tab-btn" onclick="tabClick(2); initPagination(2, 6)">
+    <div class="tab-btn" onclick="tabClick(2); initPagination(2, 5)">
         <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold">想看 (0)</a>
     </div>
 </div>
@@ -16852,47 +16854,47 @@ DIY「初学者」女孩的日常故事、活动开始！
 
 
 <div class="pagination hide">
-    <div class="page-item start-btn" onclick="toFirstPage(0, 6)">
+    <div class="page-item start-btn" onclick="toFirstPage(0, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">首页</a>
     </div>
-    <div class="page-item prev-btn" onclick="toPrevPage(0, 6)">
+    <div class="page-item prev-btn" onclick="toPrevPage(0, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">上一页</a>
     </div>
     <div class="page-item page-info">0 / 0</div>
-    <div class="page-item next-btn" onclick="toNextPage(0, 6)">
+    <div class="page-item next-btn" onclick="toNextPage(0, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">下一页</a>
     </div>
-    <div class="page-item end-btn" onclick="toLastPage(0, 6)">
+    <div class="page-item end-btn" onclick="toLastPage(0, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">尾页</a>
     </div>
 </div>
 <div class="pagination hide">
-    <div class="page-item start-btn" onclick="toFirstPage(1, 6)">
+    <div class="page-item start-btn" onclick="toFirstPage(1, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">首页</a>
     </div>
-    <div class="page-item prev-btn" onclick="toPrevPage(1, 6)">
+    <div class="page-item prev-btn" onclick="toPrevPage(1, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">上一页</a>
     </div>
     <div class="page-item page-info">0 / 0</div>
-    <div class="page-item next-btn" onclick="toNextPage(1, 6)">
+    <div class="page-item next-btn" onclick="toNextPage(1, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">下一页</a>
     </div>
-    <div class="page-item end-btn" onclick="toLastPage(1, 6)">
+    <div class="page-item end-btn" onclick="toLastPage(1, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">尾页</a>
     </div>
 </div>
 <div class="pagination hide">
-    <div class="page-item start-btn" onclick="toFirstPage(2, 6)">
+    <div class="page-item start-btn" onclick="toFirstPage(2, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">首页</a>
     </div>
-    <div class="page-item prev-btn" onclick="toPrevPage(2, 6)">
+    <div class="page-item prev-btn" onclick="toPrevPage(2, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">上一页</a>
     </div>
     <div class="page-item page-info">0 / 0</div>
-    <div class="page-item next-btn" onclick="toNextPage(2, 6)">
+    <div class="page-item next-btn" onclick="toNextPage(2, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">下一页</a>
     </div>
-    <div class="page-item end-btn" onclick="toLastPage(2, 6)">
+    <div class="page-item end-btn" onclick="toLastPage(2, 5)">
         <a href="javascript:void(0);" rel="external" target="_self">尾页</a>
     </div>
 </div>
@@ -17119,7 +17121,7 @@ function toLastPage (index, pageSize) {
 }
 
     document.getElementsByClassName('tab-btn')[0].click();
-    initPagination(0, 6)
+    initPagination(0, 5)
 </script></div>
         </div>
         
@@ -17142,7 +17144,7 @@ function toLastPage (index, pageSize) {
             
             <div class="footer-tag clearfix">
                 <div class="pull-date">
-                    <time datetime="2024-11-15T16:52:51.122Z" itemprop="dateModified">最后编辑：2024-11-16</time>
+                    <time datetime="2024-11-15T17:41:18.679Z" itemprop="dateModified">最后编辑：2024-11-16</time>
                 </div>
             </div>
         </footer>
@@ -17379,6 +17381,8 @@ function toLastPage (index, pageSize) {
 
 <!-- 额外的追加注入项 -->
 
+    <canvas id="snow"></canvas>
+
 
         <script>
     if (!window.kr) {
@@ -17404,7 +17408,7 @@ function toLastPage (index, pageSize) {
 
 <!-- 额外的追加注入项 -->
 
-  <script src="/addons/leave-event.js"></script> <script src="/addons/cursor-effects.js"></script>
+  <script src="/addons/leave-event.js"></script> <script src="/addons/cursor-effects.js"></script> <script src="/addons/snow.js"></script>
 
 
     </body>
