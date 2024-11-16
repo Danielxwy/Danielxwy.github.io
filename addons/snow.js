@@ -11,9 +11,19 @@
         fadeInSpeed: 0.02,// 越大越快
         fadeOutSpeed: 0.02
     };
+    const snowEnableStorageKey = "snow-enable";
+
+    const getLS = (k) => {
+        try {
+          return localStorage.getItem(k);
+        } catch (e) {
+          // 与 localStorage 中没有找到对应 key 的行为一致
+          return null;
+        }
+    };
 
     // 记录下雪状态
-    let isSnowing = true;
+    let isSnowing = (getLS(snowEnableStorageKey) || "true") === "true";
 
     document.addEventListener("OnSnowStateChange", (event) => {
         const lastState = isSnowing;
