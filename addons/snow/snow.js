@@ -9,7 +9,8 @@
         opacity: 0.3,
         stepsize: .1,
         fadeInSpeed: 0.02,// 越大越快
-        fadeOutSpeed: 0.02
+        fadeOutSpeed: 0.02,
+        flakeYieldForce: 0.1
     };
     const snowEnableStorageKey = "snow-enable";
 
@@ -92,7 +93,7 @@
                 const force  = minDist / (dist*dist);
                 const xcomp  = (x - x2) / dist;
                 const ycomp  = (y - y2) / dist;
-                const deltaV = force / 2;
+                const deltaV = force / 2 * snowConf.flakeYieldForce;
                 flake.velX -= deltaV * xcomp;
                 flake.velY -= deltaV * ycomp;
              } else {
