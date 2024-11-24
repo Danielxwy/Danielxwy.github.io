@@ -934,7 +934,7 @@ function updateCoords(e) {
 function setParticuleDirection(e) {
     var t = anime.random(0, 360) * Math.PI / 180,
         a = anime.random(50, 180),
-        n = [-1, 1][anime.random(0, 1)] * a;
+        n = [-1, 1][anime.random(0, 1)] * a * config.particuleSpreadSize;
     return {
         x: e.x + n * Math.cos(t),
         y: e.y + n * Math.sin(t)
@@ -943,7 +943,7 @@ function setParticuleDirection(e) {
 
 function createParticule(e, t) {
     var a = {};
-    return a.x = e, a.y = t, a.color = colors[anime.random(0, colors.length - 1)], a.radius = anime.random(16, 32), a.endPos = setParticuleDirection(a), a.draw = function() {
+    return a.x = e, a.y = t, a.color = colors[anime.random(0, colors.length - 1)], a.radius = anime.random(16 * config.particuleSize, 32 * config.particuleSize), a.endPos = setParticuleDirection(a), a.draw = function() {
         ctx.beginPath(), ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0), ctx.fillStyle = a.color, ctx.fill()
     }, a
 }
@@ -1010,8 +1010,10 @@ const config = {
     particuleColors: ["#93D0F4", "#93D1F4", "#B3DFF7", "#F0F8FC"],// 粒子颜色
     numberOfParticules: 20,// 粒子数量
     animeSpeed: 1.2,// 动画速度
-    circleSize: 1,// 外环大小
-}
+    circleSize: 0.8,// 外环大小
+    particuleSize: 0.8,// 粒子大小
+    particuleSpreadSize: 0.8,// 粒子扩散范围
+};
 
 var canvasEl = document.querySelector(".fireworks");
 if (canvasEl) {
