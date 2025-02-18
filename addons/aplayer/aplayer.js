@@ -1,7 +1,7 @@
 const ap = new APlayer({
   container: document.getElementById('aplayer'),
   fixed: true,
-  volume: 0.2,
+  volume: 0.15,
   audio: [
     {
       name: '旅人の唄',
