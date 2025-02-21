@@ -1,7 +1,7 @@
 #waifu-toggle {
 	background-color: rgb(96, 170, 255); /* #fa0 */
 	border-radius: 5px;
-	bottom: 66px;
+	bottom: 68px;
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
@@ -19,7 +19,7 @@
 }
 
 #waifu-toggle.waifu-toggle-active:hover {
-	margin-left: -30px;
+	margin-left: -32px;
 }
 
 #waifu {
