@@ -1,3 +1,7 @@
 .custom-cursor {
-    cursor: url('../../assets/cursor/idle.png'), auto;
+    cursor: url('../../assets/cursor/pointer-F1-256x256x32.png'), auto;
+}
+
+.custom-pointer {
+    cursor: url('../../assets/cursor/link-F8-256x256x32.png'), pointer;
 }
