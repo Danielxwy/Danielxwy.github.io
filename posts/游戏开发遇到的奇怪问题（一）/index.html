@@ -17,23 +17,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="IOS, 微信小游戏" />
+    <meta name="keywords" content="iOS, 微信小游戏" />
   
-  <meta name="description" content="关于IOS环境下的Socket奇葩问题">
+  <meta name="description" content="关于iOS环境下的Socket奇葩问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="游戏开发遇到的奇怪问题（一）">
 <meta property="og:url" content="https://rokisi.top/posts/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="A BLOG">
-<meta property="og:description" content="关于IOS环境下的Socket奇葩问题">
+<meta property="og:description" content="关于iOS环境下的Socket奇葩问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://rokisi.top/assets/post/cover-%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89.jpg">
+<meta property="og:image" content="https://rokisi.top/posts/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/cover.jpg">
 <meta property="article:published_time" content="2025-04-19T18:00:59.000Z">
 <meta property="article:modified_time" content="2025-04-19T18:07:52.000Z">
 <meta property="article:author" content="Danielxwy">
 <meta property="article:tag" content="微信小游戏">
-<meta property="article:tag" content="IOS">
+<meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://rokisi.top/assets/post/cover-%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89.jpg">
+<meta name="twitter:image" content="https://rokisi.top/posts/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/cover.jpg">
   
     <link rel="alternate" href="/atom.xml" title="A BLOG" type="application/atom+xml">
   
@@ -220,15 +220,15 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%92%A2-%E5%A4%A9%E6%9D%80%E7%9A%84IOS%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">💢 天杀的IOS！！！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-%E5%A4%8D%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">问题&amp;复现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%92%A2-%E5%A4%A9%E6%9D%80%E7%9A%84iOS%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">💢 天杀的iOS！！！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-%E5%A4%8D%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">问题&amp;复现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><p><img src="/../assets/post/cover-%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89.jpg" alt="cover"></p>
-<h1 id="💢-天杀的IOS！！！"><a href="#💢-天杀的IOS！！！" class="headerlink" title="💢 天杀的IOS！！！"></a>💢 天杀的IOS！！！</h1><p>公司的测试机全都没法复现，只有策划的IOS才能复现的神人bug。</p>
-<h1 id="问题-复现"><a href="#问题-复现" class="headerlink" title="问题&amp;复现"></a>问题&amp;复现</h1><p>IOS在关闭WiFi的时候Socket不会<strong>立马</strong>断开（不管打没打开蜂窝网络），所以会导致在断开WiFi的时候，如果玩家的交互会与服务器进行数据传输，客户端的表现为没有反应也就是卡住了。</p>
+            <div itemprop="articleBody"><p><img src="/posts/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/cover.jpg" alt="cover"></p>
+<h1 id="💢-天杀的iOS！！！"><a href="#💢-天杀的iOS！！！" class="headerlink" title="💢 天杀的iOS！！！"></a>💢 天杀的iOS！！！</h1><p>公司的测试机全都没法复现，只有策划的iOS才能复现的神人bug。</p>
+<h1 id="问题-复现"><a href="#问题-复现" class="headerlink" title="问题&amp;复现"></a>问题&amp;复现</h1><p>iOS在关闭WiFi的时候Socket不会<strong>立马</strong>断开（不管打没打开蜂窝网络），所以会导致在断开WiFi的时候，如果玩家的交互会与服务器进行数据传输，客户端的表现为没有反应也就是卡住了。</p>
 <p>这个问题要解决的话还好，微信提供了一个监听网络状态的接口<code>wx.onNetworkStatusChange</code>，所以只要监听网络状态，如果网络连接断开了就手动调用下<code>socket.close()</code>，然后正常走重连流程<del>，这样就完美解决这个问题了。</del></p>
-<p>上述操作搞定后在公司的测试机上测了一遍没有问题，<strong>但是</strong>策划在自己的IOS上测试后发现这个解决方案居然失效了…</p>
+<p>上述操作搞定后在公司的测试机上测了一遍没有问题，<strong>但是</strong>策划在自己的iOS上测试后发现这个解决方案居然失效了…</p>
 <p>然后我就开始加日志，结果发现在手动调用<code>socket.close()</code>之后居然没有触发Socket的onClose事件，奇了怪了…不过我也没多想，手动调用下Socket的onClose回调就行了，这次测试了下没出现问题，就在我以为问题已经解决了后，策划又传来悲报：</p>
 <blockquote>
 <p>策划：“又出问题了，重连几次后卡死了，游戏都进不去了”<br>我：“……”</p>
@@ -270,7 +270,7 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/IOS/" rel="tag">IOS</a>, <a class="tag-none-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/" rel="tag">微信小游戏</a>
+                    <a class="tag-none-link" href="/tags/iOS/" rel="tag">iOS</a>, <a class="tag-none-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/" rel="tag">微信小游戏</a>
                 </div>
                 <div class="pull-date">
                     <time datetime="2025-04-19T18:07:52.000Z" itemprop="dateModified">最后编辑：2025-04-20</time>
@@ -354,7 +354,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%92%A2-%E5%A4%A9%E6%9D%80%E7%9A%84IOS%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-text">💢 天杀的IOS！！！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-%E5%A4%8D%E7%8E%B0"><span class="toc-text">问题&amp;复现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%92%A2-%E5%A4%A9%E6%9D%80%E7%9A%84iOS%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-text">💢 天杀的iOS！！！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-%E5%A4%8D%E7%8E%B0"><span class="toc-text">问题&amp;复现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol>
     </div>
 </aside>
                 
@@ -370,7 +370,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/IOS/" style="font-size: 0.6em;">IOS</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/" style="font-size: 0.6em;">微信小游戏</a>
+        <a href="/tags/iOS/" style="font-size: 0.6em;">iOS</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/" style="font-size: 0.6em;">微信小游戏</a>
       </div>
   </aside>
 
